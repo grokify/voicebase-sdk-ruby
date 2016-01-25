@@ -12,7 +12,7 @@ VoiceBase Ruby SDK
 
 ## Overview
 
-Transcribe audio using VoiceBase.com service.
+Ruby SDK for VoiceBase.com audio transcription service.
 
 ## Installation
 
