@@ -66,9 +66,9 @@ Please report these on [Github](https://github.com/grokify/voicebase-sdk-ruby)
 
 ## License
 
-MIMEBuilder is available under an MIT-style license. See [LICENSE.txt](LICENSE.txt) for details.
+VoiceBase Ruby SDK is available under an MIT-style license. See [LICENSE.txt](LICENSE.txt) for details.
 
-MIMEBuilder &copy; 2016 by John Wang
+VoiceBase Ruby SDK &copy; 2016 by John Wang
 
  [gem-version-svg]: https://badge.fury.io/rb/voicebase.svg
  [gem-version-link]: http://badge.fury.io/rb/voicebase
