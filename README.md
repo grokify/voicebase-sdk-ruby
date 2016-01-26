@@ -70,6 +70,12 @@ voicebase.upload_media(
 
 See [CHANGELOG.md](CHANGELOG.md)
 
+## Links
+
+Project Repo
+
+* https://github.com/grokify/voicebase-sdk-ruby
+
 ## Contributions
 
 Any reports of problems, comments or suggestions are most welcome.
