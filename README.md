@@ -33,18 +33,30 @@ $ gem install voicebase
 
 ## Usage
 
-### From Filepath
+### Upload Media
+
+The `upload_media` method will accept a hash of parameters to send to the VoiceBase API. All supported parameters can be passed in.
+
+#### From Filepath
+
+Using SDK helper the `:filePath` and `:fileContentType` parameters will be auto-converted to a `:file` parameter supported by the VoiceBase API. It is also possible to directly include a `:file` parameter using `Faraday::UploadIO`.
 
 ```ruby
 voicebase = VoiceBase::V1::Client.new('myApiKey', 'myPassword')
 
+# Using SDK Helpers
 voicebase.upload_media(
   :filePath => '/path/to/myFile.mp3'
   :fileContentType => 'audio/mpeg'
 )
+
+# Using Faraday::UploadIO directly
+voicebase.upload_media(
+  :file => Faraday::UploadIO.new(filePath, fileContentType)
+)
 ```
 
-### From URL
+#### From URL
 
 ```ruby
 voicebase = VoiceBase::V1::Client.new('myApiKey', 'myPassword')
