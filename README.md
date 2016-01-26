@@ -52,7 +52,7 @@ voicebase.upload_media(
 
 # Using Faraday::UploadIO directly
 voicebase.upload_media(
-  :file => Faraday::UploadIO.new(filePath, fileContentType)
+  :file => Faraday::UploadIO.new('/path/to/myFile.mp3', 'audio/mpeg')
 )
 ```
 
