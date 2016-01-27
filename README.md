@@ -18,7 +18,7 @@ Ruby SDK for VoiceBase.com audio transcription service.
 
 ### Via Bundler
 
-Add 'voicebase' to Gemfile and then run `bundle`:
+Add `voicebase` to Gemfile and then run `bundle`:
 
 ```sh
 $ echo "gem 'voicebase'" >> Gemfile
