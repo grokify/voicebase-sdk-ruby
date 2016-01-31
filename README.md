@@ -46,13 +46,13 @@ voicebase = VoiceBase::V1::Client.new('myApiKey', 'myPassword')
 
 # Using SDK Helpers
 voicebase.upload_media(
-  :filePath => '/path/to/myFile.mp3'
-  :fileContentType => 'audio/mpeg'
+  filePath: '/path/to/myFile.mp3'
+  fileContentType: 'audio/mpeg'
 )
 
 # Using Faraday::UploadIO directly
 voicebase.upload_media(
-  :file => Faraday::UploadIO.new('/path/to/myFile.mp3', 'audio/mpeg')
+  file: Faraday::UploadIO.new('/path/to/myFile.mp3', 'audio/mpeg')
 )
 ```
 
@@ -62,7 +62,7 @@ voicebase.upload_media(
 voicebase = VoiceBase::V1::Client.new('myApiKey', 'myPassword')
 
 voicebase.upload_media(
-  :mediaUrl => 'http://example.com/path/to/myFile.mp3'
+  mediaUrl: 'http://example.com/path/to/myFile.mp3'
 )
 ```
 
