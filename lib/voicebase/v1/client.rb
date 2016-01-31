@@ -5,6 +5,9 @@ require 'faraday_middleware'
 module VoiceBase::V1
   VOICEBASE_API_VERSION = '1.1'
 
+  attr_accessor :conn_url_encoded
+  attr_accessor :conn_multipart
+
   class Client
     def initialize(api_key, password, transcript_type = 'machine-best')
       @api_key = api_key
@@ -15,14 +18,13 @@ module VoiceBase::V1
     end
 
     def new_http_client(request = :url_encoded)
-      conn = Faraday.new(:url => VoiceBase::VOICEBASE_API_BASE_PATH) \
+      return Faraday.new(url: VoiceBase::VOICEBASE_API_BASE_PATH) \
       do |faraday|
-        faraday.request request                  # multipart/form-data
+        faraday.request request
         faraday.response :json
-        faraday.response :logger                  # log requests to STDOUT
-        faraday.adapter Faraday.default_adapter  # make requests with Net::HTTP
+        faraday.response :logger                # log requests to STDOUT
+        faraday.adapter Faraday.default_adapter # make requests with Net::HTTP
       end
-      return conn
     end
 
     def upload_media(params = {})

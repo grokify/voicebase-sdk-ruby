@@ -15,6 +15,5 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.files       = Dir['lib/**/**/*'] + Dir['[A-Z]*'] + Dir['test/**/*']
   # s.files.reject! { |fn| fn.include? "CVS" }
-  # s.required_ruby_version = '>= 1.8.7' # 1.8.7+ is tested  s.add_dependency 'faraday', '~> 0.9', '>= 0.9'
   s.add_dependency 'faraday_middleware', '~> 0', '>= 0'
 end
