@@ -6,7 +6,7 @@ version = $1
 Gem::Specification.new do |s|
   s.name        = lib
   s.version     = version
-  s.date        = '2016-01-25'
+  s.date        = '2016-01-30'
   s.summary     = 'VoiceBase is a Ruby SDK for the VoiceBase API'
   s.description = 'Helper library to transcribe audio'
   s.authors     = ['John Wang']
