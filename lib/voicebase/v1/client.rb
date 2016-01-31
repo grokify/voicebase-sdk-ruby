@@ -18,7 +18,7 @@ module VoiceBase::V1
     end
 
     def new_http_client(request = :url_encoded)
-      return Faraday.new(url: VoiceBase::VOICEBASE_API_BASE_PATH) \
+      Faraday.new(url: VoiceBase::VOICEBASE_API_BASE_PATH) \
       do |faraday|
         faraday.request request
         faraday.response :json

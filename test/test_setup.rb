@@ -10,5 +10,7 @@ class VoiceBaseTest < Test::Unit::TestCase
 
   def test_main
     assert_equal 'VoiceBase::V1::Client', @vbsdk.class.name
+
+    assert_equal 'Faraday::Connection', @vbsdk.new_http_client.class.name
   end
 end
